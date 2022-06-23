@@ -1,27 +1,28 @@
-const myList = [1, 3, 5, 7, 9, 11, 22, 31, 54, 65, 82, 111];
 let counter = 0;
+const myList = [1, 3, 5, 7, 9, 11, 22, 31, 54, 65, 82, 111];
+
 function binarySearch(arr, item) {
-    let first = 0;
-    let last = arr.length;
+    let left = 0;
+    let right = arr.length - 1;
+    let mid;
 
-    while (first <= last) {
+    while (left <= right) {
         counter += 1;
-        let middle = Math.floor((first + last) / 2);
-        let guess = arr[middle];
+        mid = Math.round((right-left) / 2) + left;
 
-        if (guess === item) {
-            return middle;
-        } else if (guess > item) {
-            last = middle - 1;
+        if (item ===  arr[mid]) {
+            return mid;
+        } else if (item < arr[mid] ) {
+            right = mid - 1;
         } else {
-            first = middle + 1;
+            left = mid + 1;
         }
     }
-    return null;
+    return -1;
 }
 
-console.log(binarySearch(myList, 7));
+console.log(binarySearch(myList, 5));
 console.log(`Count: ${counter}`); // Max - 4
 
-// Complexity - O(log2 N)  -  (log2 12 - 3,58)    12 - amount of elements in arr.
+// Complexity - O(log n)
 

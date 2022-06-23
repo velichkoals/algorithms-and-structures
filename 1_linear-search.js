@@ -8,10 +8,10 @@ function linearSearch(array, item) {
             return i;
         }
     }
-    return null;
+    return -1;
 }
 
 console.log(linearSearch(arr, 43));
 console.log(`Count: ${counter}`); // Max - 9
 
-// Complexity O(n) -  0(9)
+// Complexity O(n)
