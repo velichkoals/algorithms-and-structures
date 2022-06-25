@@ -1,2 +1,2 @@
 # algorithms-and-structures
-Repository with examples of algorithms and data structures
+<h2>Repository with examples of algorithms and data structures</h2>
