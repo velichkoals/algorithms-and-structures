@@ -11,7 +11,9 @@ function linearSearch(array, item) {
     return -1;
 }
 
-console.log(linearSearch(arr, 43));
+console.log(linearSearch(arr, 2));
 console.log(`Count: ${counter}`); // Max - 9
 
 // Complexity O(n)
+
+module.exports = linearSearch;

@@ -21,8 +21,9 @@ function binarySearch(arr, item) {
     return -1;
 }
 
-console.log(binarySearch(myList, 5));
+console.log(binarySearch(myList, 2));
 console.log(`Count: ${counter}`); // Max - 4
 
 // Complexity - O(log n)
 
+module.exports = binarySearch;
